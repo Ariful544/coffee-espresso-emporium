@@ -1,0 +1,30 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Card } from "flowbite-react";
+import img from '../assets/images/1.png'
+
+const ViewDetails = () => {
+    return (
+        <div className='max-w-screen-xl px-4 md:px-0 min-h-screen mx-auto'>
+            <button className='py-10 text-3xl text-shadow-lg text-[#374151]'><Link to="/">&#8592; Back to home</Link></button>
+            <div className="flex md:flex-row flex-col gap-36 max-w-screen-lg mx-auto mt-10 border rounded-lg border-[#331A15]">
+                <figure>
+                    <img className='w-full bg-stone-200 min-h-[550px]'
+                        src={img}
+                        alt="" />
+                </figure>
+                <div className=" space-y-2 md:mt-24 -mt-10 md:text-left text-center mb-4">
+                    <h4 className='text-4xl text-[#331A15] text-shadow-lg'>Niceties</h4>
+                    <p className="text-neutral-600 text-xl font-raleway"><span className="text-[#3C393B] font-semibold">Name: </span>Americano Coffee</p>
+                    <p className="text-neutral-600 text-xl font-raleway"><span className="text-[#3C393B] font-semibold">Chef: </span>Mrs. Morisha</p>
+                    <p className="text-neutral-600 text-xl font-raleway"><span className="text-[#3C393B] font-semibold">Supplier: </span>Cappu Authorizer</p>
+                    <p className="text-neutral-600 text-xl font-raleway"><span className="text-[#3C393B] font-semibold">Taste: </span>Sweet and hot</p>
+                    <p className="text-neutral-600 text-xl font-raleway"><span className="text-[#3C393B] font-semibold">Category: </span>Americano</p>
+                    <p className="text-neutral-600 text-xl font-raleway"><span className="text-[#3C393B] font-semibold">Details: </span>Espresso with hot water</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ViewDetails;

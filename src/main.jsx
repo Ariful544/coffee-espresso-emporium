@@ -7,6 +7,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import HomeLayout from './Layouts/HomeLayout';
+import PagesLayout from './Layouts/PagesLayout';
+import AddCoffee from './pages/AddCoffee';
+import ViewDetails from './pages/ViewDetails';
+import UpdateCoffee from './pages/UpdateCoffee';
+import ErrorPage from './pages/ErrorPage';
+import ErrorLayout from './Layouts/ErrorLayout';
 
 const router = createBrowserRouter([
   {
@@ -14,8 +20,26 @@ const router = createBrowserRouter([
     element: <HomeLayout/>,
   },
   {
+    path: '/coffees',
+    element: <PagesLayout/>,
+    children:[
+      {
+        path: 'add-coffee',
+        element: <AddCoffee/>
+      },
+      {
+        path: 'view-details',
+        element: <ViewDetails/>
+      },
+      {
+        path: 'update-coffee',
+        element: <UpdateCoffee/>
+      }
+    ]
+  },
+  {
     path:'*',
-    element: <div>Error page</div>
+    element: <ErrorLayout/>
   }
 ]);
 

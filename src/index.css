@@ -10,5 +10,7 @@
     }
 }
 @layer components{
-    
+    .input-container{
+        @apply input mt-3 rounded-[5px] placeholder:text-[#331A15] text-[#331A15] w-full bg-stone-200 focus:border-none focus:ring focus:ring-[#331A15] focus:shadow-md
+    }
 }
